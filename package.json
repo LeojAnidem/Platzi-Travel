@@ -1,0 +1,13 @@
+{
+  "name": "platzi-travel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "git-commit": "git add . && git commit"
+  },
+  "keywords": [],
+  "author": "[💎]Instagram: @Leoj_Anidem",
+  "license": "ISC"
+}
