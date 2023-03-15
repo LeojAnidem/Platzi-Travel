@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "git-commit": "git add . && git commit"
+    "git-commit": "git add . && git commit",
+    "tw:build": "tailwindcss -i ./src/css/tailwind.css -o ./public/css/tailwind.css --watch"
   },
   "keywords": [],
   "author": "[💎]Instagram: @Leoj_Anidem",
