@@ -2,15 +2,15 @@
 module.exports = {
   content: ['./public/index.html', './src/**/*.{html,js}'],
   theme: {
-    colors: {
-      primary: '#CC2D4A',
-      secondary: '#8FA206',
-      tertiary: '#61AEC9'
-    },
     fontFamily: {
       Montserrat: ['Monserrat', 'sans-serif']
     },
     extend: {
+      colors: {
+        primary: '#CC2D4A',
+        secondary: '#8FA206',
+        tertiary: '#61AEC9'
+      },
       backgroundImage: {
         sanFrancisco: "url('../img/sanFrancisco.jpg')",
         sanFranciscoDesktop: "url('../img/sanFranciscoDesktop.jpg')",
