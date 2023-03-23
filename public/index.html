@@ -12,21 +12,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <nav></nav>
-    <div id="tabBar"></div>
-    <section class="w-full h-screen">
+  <body class="font-Montserrat scroll-smooth">
+    <section class="w-full h-auto mb-5">
       <div id="home">
         <div class="w-full h-3/4">
           <div class="w-full h-full flex flex-col absolute space-y-96 py-4 items-center">
             <input
-              class="p-4 rounded-full font-semibold"
+              class="
+                p-4 rounded-full font-semibold outline-none shadow-sm
+                transition duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12
+              "
               type="search"
               name="input_search"
               id="home_searchInput"
               placeholder="San Francisco"
             >
-            <button class="bg-white p-4 px-10 rounded-full text-lg font-semibold">
+            <button
+              class="bg-white p-4 px-10 rounded-full text-primary text-lg font-semibold
+              transition-all duration-500 ease-in-out hover:bg-primary hover:text-white"
+            >
               Explorar
             </button>
           </div>
@@ -35,8 +39,152 @@
           </div>
         </div>
       </div>
-      <div id="recommendations"></div>
-      <div id="featured_rentals"></div>
+      <div
+        class="p-5 flex flex-col gap-5"
+        id="recommendations"
+      >
+        <p class="text-primary text-3xl font-semibold">
+          Recomendados
+        </p>
+        <ul class="w-auto h-72 items-center overflow-x-auto overscroll-x-contain flex gap-4">
+          <li class="card">
+            <div class="card__img bg-norway"></div>
+            <div class="card__description bg-secondary text-white">
+              <p class="card__title">
+                Norway
+              </p>
+              <p class="card__text">
+                Paisajes Increibles
+              </p>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__img bg-new_york"></div>
+            <div class="card__description text-tertiary">
+              <p class="card__title">New York</p>
+              <p class="card__text">
+                Una ciudad majestuosa, lleno de un
+                sin fin de actividades
+              </p>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__img bg-sydney"></div>
+            <div class="card__description bg-secondary text-white">
+              <p class="card__title">Sydney</p>
+              <p class="card__text">
+                Una ciudad majestuosa, lleno de un
+                sin fin de actividades
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="p-5 h-full w-full"
+        id="featured_rentals"
+      >
+        <p class="text-3xl text-primary font-semibold pb-6 mt-6">
+          Rentas destacadas 
+        </p>
+        <ul class="w-full h-full flex flex-col space-y-4 items-center justify-center">
+          <li class="detail-card bg-chicago">
+            <p class="detail-card__title">
+              Chicago
+            </p>
+            <p class="detail-card__text">
+              2 Habitaciones, baño y cocina
+            </p>
+          </li>
+          <li class="detail-card bg-europe">
+            <p class="detail-card__title">
+              Europa
+            </p>
+            <p class="detail-card__text">
+              2 Habitaciones, baño y cocina
+            </p>
+          </li>
+          <li class="detail-card bg-bali">
+            <p class="detail-card__title">
+              Bali
+            </p>
+            <p class="detail-card__text">
+              2 Habitaciones, baño y cocina
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="w-full h-full"
+        id="faqs"
+      >
+        <div class="w-full h-full px-6 flex flex-col gap-3">
+          <p class="text-3xl text-primary font-semibold">
+            FAQS
+          </p>
+          <ul class="w-full h-full flex flex-col gap-5">
+            <li>
+              <p class="text-xl font-medium text-primary">
+                Politica de Cancelacion
+              </p>
+              <p class="text-md pt-2">
+                Para estancias menores a una semana es importante avisar con 3 días de
+                anticipación, de caso contario será sancionado.
+              </p>
+            </li>
+            <li>
+              <p class="text-xl font-medium text-primary">
+                Métodos de pago
+              </p>
+              <p class="text-md pt-2">
+                Aceptamos distintos métodos de pago: VISA, MasterCard, American Expres
+                Paypal y Binance
+              </p>
+            </li>
+            <li>
+              <p class="text-xl font-medium text-primary">
+                Información de Seguridad
+              </p>
+              <p class="text-md pt-2">
+                Todas nuestras estancias cuentan con seguro en caso de accidentes
+              </p>
+            </li>
+            <li>
+              <p class="text-xl font-medium text-primary">
+                Estancias Largas
+              </p>
+              <p class="text-md pt-2">
+                Contamos con estancias de hasta 3 meses, en este caso es requerido un
+                anticipo con un monto del 50% del valor de la renta
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
+    <footer class="w-full h-64 p-5 bg-gray-200 space-y-4">
+      <p class="text-lg">
+        Acerca De
+      </p>
+      <ul class="space-y-2">
+        <li class="text-sm text-gray-500">
+          Empleos
+        </li>
+        <li class="text-sm text-gray-500">
+          Iversionistas
+        </li>
+        <li class="text-sm text-gray-500">
+          Terminos y Condiciones
+        </li>
+        <li class="text-sm text-gray-500">
+          Platzi Travel, Inc.
+        </li>
+      </ul>
+    </footer>
+    <nav id="tabBar">
+      <a href="">
+
+      </a>
+    </nav>
   </body>
 </html>
