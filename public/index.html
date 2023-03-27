@@ -12,35 +12,133 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   </head>
-  <body class="font-Montserrat scroll-smooth">
-    <section class="w-full h-auto mb-5">
-      <div id="home">
-        <div class="w-full h-3/4">
-          <div class="w-full h-full flex flex-col absolute space-y-96 py-4 items-center">
+  <body class="w-full h-full font-Montserrat scroll-smooth flex flex-col gap-10">
+    <nav
+      class="
+          w-full h-auto px-14 py-4 hidden bg-white lg:grid grid-flow-col place-content-center
+          fixed top-0 z-10 shadow-2xl justify-between
+        "
+      >
+      <div class="h-auto w-auto">
+        <p class="text-3xl font-bold text-primary">
+          Platzi Travel
+        </p>
+      </div>
+      <div class="flex items-center justify-center gap-4">
+        <a
+          class="font-bold text-lg text-primary"
+          href="#home"
+        >
+          Inicio
+        </a>
+        <a
+          class="font-bold text-lg text-primary"
+          href="#recommendations"
+        >
+          Recomendados
+        </a>
+        <a
+          class="font-bold text-lg text-primary"
+          href="#featured_rentals"
+        >
+          Rentas
+        </a>
+        <a
+          class="font-bold text-lg text-primary"
+          href="#faqs"
+        >
+          FAQS
+        </a>
+        <a
+          class="font-bold text-lg text-primary"
+          href="#aboutMe"
+        >
+          Sobre Nosotros
+        </a>
+      </div>
+      <div class="flex items-center justify-center gap-4">
+        <svg 
+          class="w-6 h-6 fill-primary"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24" fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z"
+            clip-rule="evenodd"
+          />
+        </svg>
+        <svg
+          class="w-6 h-6 fill-primary"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+            clip-rule="evenodd"
+          />
+        </svg>        
+        <svg
+          class="w-6 h-6 fill-gray-400"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+            clip-rule="evenodd"
+          />
+        </svg>        
+      </div>
+    </nav>
+    <section class="w-full h-auto flex flex-col gap-10">
+      <div id="home" class="w-full h-[36rem]">
+        <div class="w-full h-full">
+          <div
+            class="
+              w-full h-full flex flex-col absolute space-y-96 py-4 items-center
+              lg:space-y-0 lg:items-start lg:pt-48 lg:justify-start
+            "
+          >
             <input
               class="
                 p-4 rounded-full font-semibold outline-none shadow-sm
                 transition duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12
+                lg:hidden
               "
               type="search"
               name="input_search"
               id="home_searchInput"
               placeholder="San Francisco"
             >
+            <div class="hidden h-auto lg:w-2/5 lg:flex pb-6">
+              <p class="text-4xl ml-16 font-bold">
+                Encuentra mas ubicaciones como esta
+              </p>
+            </div>
             <button
-              class="bg-white p-4 px-10 rounded-full text-primary text-lg font-semibold
-              transition-all duration-500 ease-in-out hover:bg-primary hover:text-white"
+              class="
+              bg-white p-4 px-10 rounded-full text-primary text-lg font-semibold
+                transition-all duration-500 ease-in-out hover:bg-primary hover:text-white
+                lg:ml-16
+              "
             >
               Explorar
             </button>
           </div>
-          <div class="w-full h-full">
-            <img src="./img/sanFrancisco.jpg">
+          <div class="w-full h-full lg:h-full lg:bg-sanFranciscoDesktop lg:bg-cover lg:bg-center">
+            <img
+              class="lg:hidden"
+              src="./img/sanFrancisco.jpg"
+            >
           </div>
         </div>
       </div>
       <div
-        class="p-5 flex flex-col gap-5"
+        class="px-14 flex flex-col gap-5"
         id="recommendations"
       >
         <p class="text-primary text-3xl font-semibold">
@@ -78,17 +176,85 @@
               </p>
             </div>
           </li>
+          <li class="card">
+            <div class="card__img bg-norway"></div>
+            <div class="card__description bg-secondary text-white">
+              <p class="card__title">
+                Norway
+              </p>
+              <p class="card__text">
+                Paisajes Increibles
+              </p>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__img bg-new_york"></div>
+            <div class="card__description text-tertiary">
+              <p class="card__title">New York</p>
+              <p class="card__text">
+                Una ciudad majestuosa, lleno de un
+                sin fin de actividades
+              </p>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__img bg-sydney"></div>
+            <div class="card__description bg-secondary text-white">
+              <p class="card__title">Sydney</p>
+              <p class="card__text">
+                Una ciudad majestuosa, lleno de un
+                sin fin de actividades
+              </p>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__img bg-norway"></div>
+            <div class="card__description bg-secondary text-white">
+              <p class="card__title">
+                Norway
+              </p>
+              <p class="card__text">
+                Paisajes Increibles
+              </p>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__img bg-new_york"></div>
+            <div class="card__description text-tertiary">
+              <p class="card__title">New York</p>
+              <p class="card__text">
+                Una ciudad majestuosa, lleno de un
+                sin fin de actividades
+              </p>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__img bg-sydney"></div>
+            <div class="card__description bg-secondary text-white">
+              <p class="card__title">Sydney</p>
+              <p class="card__text">
+                Una ciudad majestuosa, lleno de un
+                sin fin de actividades
+              </p>
+            </div>
+          </li>
         </ul>
       </div>
       <div
-        class="p-5 h-full w-full"
+        class="px-14 h-full w-full"
         id="featured_rentals"
       >
         <p class="text-3xl text-primary font-semibold pb-6 mt-6">
           Rentas destacadas 
         </p>
-        <ul class="w-full h-full flex flex-col space-y-4 items-center justify-center">
-          <li class="detail-card bg-chicago">
+        <ul
+          class="
+            w-full h-full grid grid-cols-1 gap-4 items-center justify-center
+            lg:grid-cols-2 lg:place-items-center lg:place-content-stretch
+            lg:gap-8
+          "
+        >
+          <li class="detail-card bg-chicago lg:col-span-2">
             <p class="detail-card__title">
               Chicago
             </p>
@@ -96,9 +262,17 @@
               2 Habitaciones, baño y cocina
             </p>
           </li>
-          <li class="detail-card bg-europe">
+          <li class="detail-card bg-europe lg:row-span-2 lg:h-full">
             <p class="detail-card__title">
               Europa
+            </p>
+            <p class="detail-card__text">
+              2 Habitaciones, baño y cocina
+            </p>
+          </li>
+          <li class="detail-card bg-bali">
+            <p class="detail-card__title">
+              Bali
             </p>
             <p class="detail-card__text">
               2 Habitaciones, baño y cocina
@@ -115,14 +289,14 @@
         </ul>
       </div>
       <div
-        class="w-full h-full"
+        class="w-full h-full px-14"
         id="faqs"
       >
-        <div class="w-full h-full px-6 flex flex-col gap-3">
+        <div class="w-full h-full flex flex-col gap-4">
           <p class="text-3xl text-primary font-semibold">
             FAQS
           </p>
-          <ul class="w-full h-full flex flex-col gap-5">
+          <ul class="w-full h-full flex flex-col gap-4">
             <li>
               <p class="text-xl font-medium text-primary">
                 Politica de Cancelacion
@@ -162,27 +336,27 @@
         </div>
       </div>
     </section>
-    <footer class="w-full h-64 p-5 bg-gray-200 space-y-4">
-      <p class="text-lg">
+    <footer id="aboutMe" class="w-full h-auto px-14 py-10 bg-gray-200 space-y-4 sm:mb-14">
+      <p class="text-lg lg:text-4xl">
         Acerca De
       </p>
       <ul class="space-y-2">
-        <li class="text-sm text-gray-500">
+        <li class="text-sm lg:text-xl text-gray-500">
           Empleos
         </li>
-        <li class="text-sm text-gray-500">
+        <li class="text-sm lg:text-xl text-gray-500">
           Iversionistas
         </li>
-        <li class="text-sm text-gray-500">
+        <li class="text-sm lg:text-xl text-gray-500">
           Terminos y Condiciones
         </li>
-        <li class="text-sm text-gray-500">
+        <li class="text-sm lg:text-xl text-gray-500">
           Platzi Travel, Inc.
         </li>
       </ul>
     </footer>
     <nav
-      class="w-full h-auto p-5 bg-white fixed left-0 bottom-0 shadow-2xl flex justify-around items-center"
+      class="w-full h-auto p-5 bg-white fixed left-0 bottom-0 shadow-2xl flex justify-around items-center lg:hidden"
       id="tabBar"
     >
       <a href="#home">
