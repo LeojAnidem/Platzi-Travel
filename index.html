@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/tailwind.css">
+    <title>Platzi Travel | Landing</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  </head>
+  <body
+    class="
+      w-full h-full font-Montserrat scroll-smooth flex flex-col gap-10
+      dark:bg-gray-900
+    "
+  >
+    <nav
+      class="
+          w-full h-auto px-14 py-4 hidden bg-white lg:grid grid-flow-col place-content-center
+          fixed top-0 z-10 shadow-2xl justify-between dark:bg-gray-800
+        "
+      >
+      <div class="h-auto w-auto">
+        <p class="text-3xl font-bold text-primary dark:text-white">
+          Platzi Travel
+        </p>
+      </div>
+      <div class="flex items-center justify-center gap-4 text-primary dark:text-white">
+        <a
+          class="font-bold text-lg"
+          href="#home"
+        >
+          Inicio
+        </a>
+        <a
+          class="font-bold text-lg"
+          href="#recommendations"
+        >
+          Recomendados
+        </a>
+        <a
+          class="font-bold text-lg"
+          href="#featured_rentals"
+        >
+          Rentas
+        </a>
+        <a
+          class="font-bold text-lg"
+          href="#faqs"
+        >
+          FAQS
+        </a>
+        <a
+          class="font-bold text-lg"
+          href="#aboutMe"
+        >
+          Sobre Nosotros
+        </a>
+      </div>
+      <div class="flex items-center justify-center gap-4">
+        <svg 
+          class="w-6 h-6 fill-primary dark:fill-white"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24" fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z"
+            clip-rule="evenodd"
+          />
+        </svg>
+        <button id="toggle">
+          <svg
+            class="w-6 h-6 fill-primary dark:fill-white"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+              clip-rule="evenodd"
+            />
+          </svg>        
+        </button>
+        <svg
+          class="w-6 h-6 fill-gray-400 dark:fill-white"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+            clip-rule="evenodd"
+          />
+        </svg>        
+      </div>
+    </nav>
+    <section class="w-full h-auto flex flex-col gap-10">
+      <div id="home" class="w-full h-[36rem]">
+        <div class="w-full h-full">
+          <div
+            class="
+              w-full h-full flex flex-col absolute space-y-96 py-4 items-center
+              lg:space-y-0 lg:items-start lg:pt-48 lg:justify-start
+            "
+          >
+            <input
+              class="
+                p-4 rounded-full font-semibold outline-none shadow-sm
+                transition duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12
+                lg:hidden
+              "
+              type="search"
+              name="input_search"
+              id="home_searchInput"
+              placeholder="San Francisco"
+            >
+            <div class="hidden h-auto lg:w-2/5 lg:flex pb-6">
+              <p class="text-4xl ml-16 font-bold">
+                Encuentra mas ubicaciones como esta
+              </p>
+            </div>
+            <button
+              class="
+              bg-white p-4 px-10 rounded-full text-primary text-lg font-semibold
+                transition-all duration-500 ease-in-out hover:bg-primary hover:text-white
+                lg:ml-16
+              "
+            >
+              Explorar
+            </button>
+          </div>
+          <div class="w-full h-full lg:h-full lg:bg-sanFranciscoDesktop lg:bg-cover lg:bg-center">
+            <img
+              class="lg:hidden"
+              src="./img/sanFrancisco.jpg"
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        class="px-14 flex flex-col gap-5"
+        id="recommendations"
+      >
+        <p class="text-primary text-3xl font-semibold">
+          Recomendados
+        </p>
+        <ul class="w-auto h-72 items-center overflow-x-auto overscroll-x-contain flex gap-4">
+          <li class="card">
+            <div class="card__img bg-norway"></div>
+            <div class="card__description">
+              <p class="card__title">
+                Norway
+              </p>
+              <p class="card__text">
+                Paisajes Increibles
+              </p>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__img bg-new_york"></div>
+            <div class="card__description">
+              <p class="card__title">New York</p>
+              <p class="card__text">
+                Una ciudad majestuosa, lleno de un
+                sin fin de actividades
+              </p>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__img bg-sydney"></div>
+            <div class="card__description">
+              <p class="card__title">Sydney</p>
+              <p class="card__text">
+                Una ciudad majestuosa, lleno de un
+                sin fin de actividades
+              </p>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__img bg-norway"></div>
+            <div class="card__description">
+              <p class="card__title">
+                Norway
+              </p>
+              <p class="card__text">
+                Paisajes Increibles
+              </p>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__img bg-new_york"></div>
+            <div class="card__description">
+              <p class="card__title">New York</p>
+              <p class="card__text">
+                Una ciudad majestuosa, lleno de un
+                sin fin de actividades
+              </p>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__img bg-sydney"></div>
+            <div class="card__description">
+              <p class="card__title">Sydney</p>
+              <p class="card__text">
+                Una ciudad majestuosa, lleno de un
+                sin fin de actividades
+              </p>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__img bg-norway"></div>
+            <div class="card__description">
+              <p class="card__title">
+                Norway
+              </p>
+              <p class="card__text">
+                Paisajes Increibles
+              </p>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__img bg-new_york"></div>
+            <div class="card__description">
+              <p class="card__title">New York</p>
+              <p class="card__text">
+                Una ciudad majestuosa, lleno de un
+                sin fin de actividades
+              </p>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__img bg-sydney"></div>
+            <div class="card__description">
+              <p class="card__title">Sydney</p>
+              <p class="card__text">
+                Una ciudad majestuosa, lleno de un
+                sin fin de actividades
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="px-14 h-full w-full"
+        id="featured_rentals"
+      >
+        <p class="text-3xl text-primary font-semibold pb-6 mt-6">
+          Rentas destacadas 
+        </p>
+        <ul
+          class="
+            w-full h-full grid grid-cols-1 gap-4 items-center justify-center
+            lg:grid-cols-2 lg:place-items-center lg:place-content-stretch
+            lg:gap-8
+          "
+        >
+          <li class="detail-card bg-chicago lg:col-span-2">
+            <p class="detail-card__title">
+              Chicago
+            </p>
+            <p class="detail-card__text">
+              2 Habitaciones, baño y cocina
+            </p>
+          </li>
+          <li class="detail-card bg-europe lg:row-span-2 lg:h-full">
+            <p class="detail-card__title">
+              Europa
+            </p>
+            <p class="detail-card__text">
+              2 Habitaciones, baño y cocina
+            </p>
+          </li>
+          <li class="detail-card bg-bali">
+            <p class="detail-card__title">
+              Bali
+            </p>
+            <p class="detail-card__text">
+              2 Habitaciones, baño y cocina
+            </p>
+          </li>
+          <li class="detail-card bg-bali">
+            <p class="detail-card__title">
+              Bali
+            </p>
+            <p class="detail-card__text">
+              2 Habitaciones, baño y cocina
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="w-full h-full px-14"
+        id="faqs"
+      >
+        <div class="w-full h-full flex flex-col gap-4">
+          <p class="text-3xl text-primary font-semibold">
+            FAQS
+          </p>
+          <ul class="w-full h-full flex flex-col gap-4 dark:text-white">
+            <li>
+              <p class="text-2xl font-medium text-primary">
+                Politica de Cancelacion
+              </p>
+              <p class="text-xl pt-2">
+                Para estancias menores a una semana es importante avisar con 3 días de
+                anticipación, de caso contario será sancionado.
+              </p>
+            </li>
+            <li>
+              <p class="text-2xl font-medium text-primary">
+                Métodos de pago
+              </p>
+              <p class="text-xl pt-2">
+                Aceptamos distintos métodos de pago: VISA, MasterCard, American Expres
+                Paypal y Binance
+              </p>
+            </li>
+            <li>
+              <p class="text-2xl font-medium text-primary">
+                Información de Seguridad
+              </p>
+              <p class="text-xl pt-2">
+                Todas nuestras estancias cuentan con seguro en caso de accidentes
+              </p>
+            </li>
+            <li>
+              <p class="text-2xl font-medium text-primary">
+                Estancias Largas
+              </p>
+              <p class="text-xl pt-2">
+                Contamos con estancias de hasta 3 meses, en este caso es requerido un
+                anticipo con un monto del 50% del valor de la renta
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer id="aboutMe" class="w-full h-auto px-14 py-10 bg-gray-200 space-y-4 mb-14 lg:mb-0">
+      <p class="text-lg lg:text-4xl">
+        Acerca De
+      </p>
+      <ul class="space-y-2">
+        <li class="text-sm lg:text-xl text-gray-500">
+          Empleos
+        </li>
+        <li class="text-sm lg:text-xl text-gray-500">
+          Iversionistas
+        </li>
+        <li class="text-sm lg:text-xl text-gray-500">
+          Terminos y Condiciones
+        </li>
+        <li class="text-sm lg:text-xl text-gray-500">
+          Platzi Travel, Inc.
+        </li>
+      </ul>
+    </footer>
+    <nav
+      class="
+        w-full h-auto p-5 bg-white fixed left-0 bottom-0 shadow-2xl flex justify-around items-center lg:hidden
+        dark:bg-gray-800
+      "
+      id="tabBar"
+    >
+      <a href="#home">
+        <svg
+          class="w-8 h-8 fill-gray-300"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24" 
+          fill="currentColor"
+        >
+          <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+          <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+        </svg>        
+      </a>
+      <a href="#recommendations">
+        <svg
+          class="w-8 h-8 fill-primary"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path 
+            fill-rule="evenodd"
+            d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z"
+            clip-rule="evenodd" 
+          />
+        </svg>
+      </a>
+      <a href="#featured_rentals">
+        <svg
+          class="w-8 h-8 fill-gray-300"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+        </svg>        
+      </a>
+      <button id="toggle-sm">
+        <svg
+          class="w-8 h-8 fill-gray-300"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </button>
+      <a>
+        <svg
+          class="w-8 h-8 fill-gray-300"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </a>
+    </nav>
+    <script>
+      const htmlElement = document.querySelector('html')
+      const toggleButton = document.querySelector('#toggle')
+      const toggleButtonSm = document.querySelector('#toggle-sm')
+
+      const togggleDarkMode = () => {
+        htmlElement.classList.contains('dark')
+          ? htmlElement.classList.remove('dark')
+          : htmlElement.classList.add('dark')
+      }
+
+      toggleButton.addEventListener('click', () => togggleDarkMode())
+      toggleButtonSm.addEventListener('click', () => togggleDarkMode())
+    </script>
+  </body>
+</html>
