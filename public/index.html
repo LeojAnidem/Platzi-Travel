@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,45 +12,50 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   </head>
-  <body class="w-full h-full font-Montserrat scroll-smooth flex flex-col gap-10">
+  <body
+    class="
+      w-full h-full font-Montserrat scroll-smooth flex flex-col gap-10
+      dark:bg-gray-900
+    "
+  >
     <nav
       class="
           w-full h-auto px-14 py-4 hidden bg-white lg:grid grid-flow-col place-content-center
-          fixed top-0 z-10 shadow-2xl justify-between
+          fixed top-0 z-10 shadow-2xl justify-between dark:bg-gray-800
         "
       >
       <div class="h-auto w-auto">
-        <p class="text-3xl font-bold text-primary">
+        <p class="text-3xl font-bold text-primary dark:text-white">
           Platzi Travel
         </p>
       </div>
-      <div class="flex items-center justify-center gap-4">
+      <div class="flex items-center justify-center gap-4 text-primary dark:text-white">
         <a
-          class="font-bold text-lg text-primary"
+          class="font-bold text-lg"
           href="#home"
         >
           Inicio
         </a>
         <a
-          class="font-bold text-lg text-primary"
+          class="font-bold text-lg"
           href="#recommendations"
         >
           Recomendados
         </a>
         <a
-          class="font-bold text-lg text-primary"
+          class="font-bold text-lg"
           href="#featured_rentals"
         >
           Rentas
         </a>
         <a
-          class="font-bold text-lg text-primary"
+          class="font-bold text-lg"
           href="#faqs"
         >
           FAQS
         </a>
         <a
-          class="font-bold text-lg text-primary"
+          class="font-bold text-lg"
           href="#aboutMe"
         >
           Sobre Nosotros
@@ -58,7 +63,7 @@
       </div>
       <div class="flex items-center justify-center gap-4">
         <svg 
-          class="w-6 h-6 fill-primary"
+          class="w-6 h-6 fill-primary dark:fill-white"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24" fill="currentColor"
         >
@@ -68,20 +73,22 @@
             clip-rule="evenodd"
           />
         </svg>
+        <button id="toggle">
+          <svg
+            class="w-6 h-6 fill-primary dark:fill-white"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+              clip-rule="evenodd"
+            />
+          </svg>        
+        </button>
         <svg
-          class="w-6 h-6 fill-primary"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
-            clip-rule="evenodd"
-          />
-        </svg>        
-        <svg
-          class="w-6 h-6 fill-gray-400"
+          class="w-6 h-6 fill-gray-400 dark:fill-white"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
@@ -147,7 +154,7 @@
         <ul class="w-auto h-72 items-center overflow-x-auto overscroll-x-contain flex gap-4">
           <li class="card">
             <div class="card__img bg-norway"></div>
-            <div class="card__description bg-secondary text-white">
+            <div class="card__description">
               <p class="card__title">
                 Norway
               </p>
@@ -158,7 +165,7 @@
           </li>
           <li class="card">
             <div class="card__img bg-new_york"></div>
-            <div class="card__description text-tertiary">
+            <div class="card__description">
               <p class="card__title">New York</p>
               <p class="card__text">
                 Una ciudad majestuosa, lleno de un
@@ -168,7 +175,7 @@
           </li>
           <li class="card">
             <div class="card__img bg-sydney"></div>
-            <div class="card__description bg-secondary text-white">
+            <div class="card__description">
               <p class="card__title">Sydney</p>
               <p class="card__text">
                 Una ciudad majestuosa, lleno de un
@@ -178,7 +185,7 @@
           </li>
           <li class="card">
             <div class="card__img bg-norway"></div>
-            <div class="card__description bg-secondary text-white">
+            <div class="card__description">
               <p class="card__title">
                 Norway
               </p>
@@ -189,7 +196,7 @@
           </li>
           <li class="card">
             <div class="card__img bg-new_york"></div>
-            <div class="card__description text-tertiary">
+            <div class="card__description">
               <p class="card__title">New York</p>
               <p class="card__text">
                 Una ciudad majestuosa, lleno de un
@@ -199,7 +206,7 @@
           </li>
           <li class="card">
             <div class="card__img bg-sydney"></div>
-            <div class="card__description bg-secondary text-white">
+            <div class="card__description">
               <p class="card__title">Sydney</p>
               <p class="card__text">
                 Una ciudad majestuosa, lleno de un
@@ -209,7 +216,7 @@
           </li>
           <li class="card">
             <div class="card__img bg-norway"></div>
-            <div class="card__description bg-secondary text-white">
+            <div class="card__description">
               <p class="card__title">
                 Norway
               </p>
@@ -220,7 +227,7 @@
           </li>
           <li class="card">
             <div class="card__img bg-new_york"></div>
-            <div class="card__description text-tertiary">
+            <div class="card__description">
               <p class="card__title">New York</p>
               <p class="card__text">
                 Una ciudad majestuosa, lleno de un
@@ -230,7 +237,7 @@
           </li>
           <li class="card">
             <div class="card__img bg-sydney"></div>
-            <div class="card__description bg-secondary text-white">
+            <div class="card__description">
               <p class="card__title">Sydney</p>
               <p class="card__text">
                 Una ciudad majestuosa, lleno de un
@@ -296,38 +303,38 @@
           <p class="text-3xl text-primary font-semibold">
             FAQS
           </p>
-          <ul class="w-full h-full flex flex-col gap-4">
+          <ul class="w-full h-full flex flex-col gap-4 dark:text-white">
             <li>
-              <p class="text-xl font-medium text-primary">
+              <p class="text-2xl font-medium text-primary">
                 Politica de Cancelacion
               </p>
-              <p class="text-md pt-2">
+              <p class="text-xl pt-2">
                 Para estancias menores a una semana es importante avisar con 3 días de
                 anticipación, de caso contario será sancionado.
               </p>
             </li>
             <li>
-              <p class="text-xl font-medium text-primary">
+              <p class="text-2xl font-medium text-primary">
                 Métodos de pago
               </p>
-              <p class="text-md pt-2">
+              <p class="text-xl pt-2">
                 Aceptamos distintos métodos de pago: VISA, MasterCard, American Expres
                 Paypal y Binance
               </p>
             </li>
             <li>
-              <p class="text-xl font-medium text-primary">
+              <p class="text-2xl font-medium text-primary">
                 Información de Seguridad
               </p>
-              <p class="text-md pt-2">
+              <p class="text-xl pt-2">
                 Todas nuestras estancias cuentan con seguro en caso de accidentes
               </p>
             </li>
             <li>
-              <p class="text-xl font-medium text-primary">
+              <p class="text-2xl font-medium text-primary">
                 Estancias Largas
               </p>
-              <p class="text-md pt-2">
+              <p class="text-xl pt-2">
                 Contamos con estancias de hasta 3 meses, en este caso es requerido un
                 anticipo con un monto del 50% del valor de la renta
               </p>
@@ -336,7 +343,7 @@
         </div>
       </div>
     </section>
-    <footer id="aboutMe" class="w-full h-auto px-14 py-10 bg-gray-200 space-y-4 sm:mb-14">
+    <footer id="aboutMe" class="w-full h-auto px-14 py-10 bg-gray-200 space-y-4 mb-14 lg:mb-0">
       <p class="text-lg lg:text-4xl">
         Acerca De
       </p>
@@ -356,7 +363,10 @@
       </ul>
     </footer>
     <nav
-      class="w-full h-auto p-5 bg-white fixed left-0 bottom-0 shadow-2xl flex justify-around items-center lg:hidden"
+      class="
+        w-full h-auto p-5 bg-white fixed left-0 bottom-0 shadow-2xl flex justify-around items-center lg:hidden
+        dark:bg-gray-800
+      "
       id="tabBar"
     >
       <a href="#home">
@@ -394,7 +404,7 @@
           <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
         </svg>        
       </a>
-      <a>
+      <button id="toggle-sm">
         <svg
           class="w-8 h-8 fill-gray-300"
           xmlns="http://www.w3.org/2000/svg"
@@ -407,7 +417,7 @@
             clip-rule="evenodd"
           />
         </svg>
-      </a>
+      </button>
       <a>
         <svg
           class="w-8 h-8 fill-gray-300"
@@ -423,5 +433,19 @@
         </svg>
       </a>
     </nav>
+    <script>
+      const htmlElement = document.querySelector('html')
+      const toggleButton = document.querySelector('#toggle')
+      const toggleButtonSm = document.querySelector('#toggle-sm')
+
+      const togggleDarkMode = () => {
+        htmlElement.classList.contains('dark')
+          ? htmlElement.classList.remove('dark')
+          : htmlElement.classList.add('dark')
+      }
+
+      toggleButton.addEventListener('click', () => togggleDarkMode())
+      toggleButtonSm.addEventListener('click', () => togggleDarkMode())
+    </script>
   </body>
 </html>

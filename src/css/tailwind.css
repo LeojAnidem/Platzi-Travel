@@ -15,6 +15,14 @@
   @apply w-full h-2/5 p-3 flex flex-col gap-y-1 rounded-b-lg overflow-hidden
 }
 
+.card:nth-child(even) .card__description {
+  @apply bg-secondary text-white dark:bg-slate-700
+}
+
+.card:nth-child(odd) .card__description {
+  @apply text-tertiary dark:bg-gray-800 dark:text-gray-300
+}
+
 .card__title {
   @apply w-full h-1/3 font-bold text-xl
 }
